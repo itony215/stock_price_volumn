@@ -39,7 +39,7 @@ for idx, i in enumerate(company_list['公司代號']):
             df.loc[lst_new,str(tonow.month)+"/"+str(tonow.day)]= f'{float(lst2_new):g}'
             #df.loc[lst_new,"1/5"]= f'{float(lst2_new):g}'
             
-        if path.exists("./price_volumn/"+str(i)+".csv"):
+        if path.exists("/home/pitaya/Documents/stock/price_volumn/"+str(i)+".csv"):
             df2 = pd.read_csv("/home/pitaya/Documents/stock/price_volumn/"+str(i)+".csv", header=0, index_col = 0)
             df2_split = df2.iloc[:,1:]
             #df2_split = df2.columns.get_loc("1/6")
